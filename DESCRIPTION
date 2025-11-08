@@ -17,5 +17,5 @@ Suggests:
     knitr,
     rmarkdown
 Config/testthat/edition: 3
-URL: https://github.com/vinoalles/PACE
+URL: https://github.com/vinoalles/PACE, https://vinoalles.github.io/PACE/
 BugReports: https://github.com/vinoalles/PACE/issues
