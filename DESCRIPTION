@@ -1,0 +1,19 @@
+Package: PACE
+Title: Predictive Adjusted Capped Estimator for Time Series Forecasting
+Version: 0.0.1
+Authors@R: 
+    person("Vinodhkumar", "Gunasekaran", email="vinoalles@gmail.com", role=c("aut","cre"))
+Description: PACE is a hybrid forecasting algorithm blending YoY, QoQ, and prior-period growth with volatility caps and seasonal adjustments to produce stable, interpretable forecasts for business and macro time series.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports:
+    dplyr,
+    lubridate
+Suggests:
+    testthat (>= 3.0.0),
+    ggplot2,
+    knitr,
+    rmarkdown
+Config/testthat/edition: 3
