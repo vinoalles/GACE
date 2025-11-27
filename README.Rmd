@@ -2,20 +2,37 @@
 output: github_document
 ---
 
-# PACE
+# GACE <img src="man/figures/logo.png" align="right" width="120" />
 
-> **P**redictive **A**djusted **C**apped **E**stimator:  
-> A transparent forecasting method combining growth signals with volatility controls.
+> **G**eneralized **A**daptive **C**apped **E**stimator  
+> A stable, deterministic forecasting engine for weekly, monthly, quarterly, and yearly data.
 
-The **PACE** R package provides a simple, deterministic forecasting
-approach that blends year-over-year, quarter-over-quarter, and
-prior-quarter growth indicators while applying fixed caps to prevent
-unstable jumps. The method is fully transparent and requires no model
-fitting.
+---
 
-PACE is designed for users who need fast, explainable, and stable
-short-term forecasts across many domains, including economics, finance,
-operations, and general time-series analysis.
+## 📘 Overview
+
+**GACE** provides a transparent, tuning-free forecasting method based on hybrid growth signals and adaptive asymmetric caps.  
+It extends deterministic capped-growth forecasting to handle:
+
+- weekly,  
+- monthly,  
+- quarterly,  
+- yearly  
+
+time-series with optional seasonal scaling.
+
+GACE is designed for:
+
+- demand forecasting  
+- financial & portfolio forecasting  
+- operational forecasting  
+- budgeting & scenario planning  
+
+Its philosophy is simple:
+
+### **Stable + Interpretable + Fast**
+
+No nonlinear optimization. No stochastic fitting. Fully deterministic.
 
 ---
 
@@ -23,17 +40,22 @@ operations, and general time-series analysis.
 
 | Capability | Description |
 |-----------|-------------|
-| Quarterly forecasting | ✔️ |
-| Growth-rate blending | ✔️ |
-| Volatility/outlier caps | ✔️ |
-| Optional seasonal scaling | ✔️ |
-| Plot helper | ✔️ |
-| Deterministic (no model fitting) | ✔️ |
+| Supports week / month / quarter / year | ✔️ |
+| Hybrid growth signals (YoY, short-term, rolling, drift) | ✔️ |
+| Volatility-aware asymmetric caps | ✔️ |
+| Seasonal & non-seasonal modes | ✔️ |
+| Fully deterministic (fast, no model fitting) | ✔️ |
+| Plot helper `plot_gace()` | ✔️ |
+| CRAN-compatible design | ✔️ |
 
 ---
 
 ## 📦 Installation
 
+### From GitHub (development version)
+
+
 ```r
-# Development version
-devtools::install_github("vinoalles/PACE")
+install.packages("devtools")
+devtools::install_github("vinoalles/GACE")
+```

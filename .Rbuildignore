@@ -1,13 +1,30 @@
+# Ignore RStudio project files
 ^.*\.Rproj$
 ^\.Rproj\.user$
+
+# Ignore README sources (keep README.md)
 ^README\.Rmd$
 ^README\.html$
+
+# Ignore pkgdown site and config
 ^docs$
-^pkgdown$
-^\.github$
-^\.devcontainer$
 ^_pkgdown\.yml$
+^_pkgdown$
+
+# Ignore GitHub metadata
+^\.github$
+
+# Ignore devcontainer config
+^devcontainer$
+^\.devcontainer$
+
+# Ignore extended MIT license file
 ^LICENSE\.md$
+
+# Ignore code coverage config
 ^codecov\.yml$
-^doc$
-^Meta$
+
+# Ignore test snapshots & internal dev folders (optional)
+^revdep$
+^cran-comments\.md$
+^CRAN-RELEASE$

@@ -1,0 +1,73 @@
+---
+title: "GACE: Generalized Adaptive Capped Estimator"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{GACE: Generalized Adaptive Capped Estimator}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+The **GACE** package provides a fast, deterministic, and interpretable
+forecasting method based on hybrid growth signals and asymmetric caps.
+It supports weekly, monthly, quarterly, and yearly data and allows users
+to choose manual or automatic cap selection.
+
+This vignette illustrates basic usage of the package.
+
+# Basic example
+
+```{r setup}
+library(GACE)
+```
+
+We begin by generating a simple monthly time series:
+
+```{r}
+set.seed(123)
+y <- ts(rnorm(36, 100, 10), frequency = 12)
+```
+
+Now we produce a 12-month forecast:
+
+```{r}
+fc <- gace_forecast(
+  df = y,
+  periods = 12,
+  freq = "month",
+  seasonal = TRUE
+)
+
+head(fc)
+```
+
+# Plotting
+
+```{r}
+plot_gace(fc)
+```
+
+# How it works
+
+GACE blends three intuitive growth signals:
+
+- year-over-year growth  
+- prior-period growth  
+- rolling-window growth  
+
+It then applies fixed or adaptive asymmetric caps to ensure
+non-explosive forecasts and optional seasonal scaling.
+
+# Conclusion
+
+GACE provides a practical, transparent forecasting alternative for
+business and applied analytics.  
+For more details, refer to the function documentation.

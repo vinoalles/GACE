@@ -1,33 +1,41 @@
-Package: PACE
-Title: Predictive Adjusted Capped Estimator for Time Series Forecasting
-Version: 0.1.1
-Authors@R: 
+Package: GACE
+Title: Generalized Adaptive Capped Estimator for Time Series Forecasting
+Version: 1.0.0
+Authors@R:
     person(given = "Vinodhkumar",
            family = "Gunasekaran",
            role = c("aut", "cre"),
            email = "vinoalles@gmail.com")
-Description: The Predictive Adjusted Capped Estimator (PACE) is a deterministic 
-  hybrid growth-based forecasting method that combines year-over-year, rolling 
-  quarter-over-quarter, and prior-quarter growth signals. The method applies 
-  fixed asymmetric caps and optional seasonal scaling to produce stable and 
-  interpretable multi-step forecasts. The package includes tools for one-step 
-  and multi-step forecasting, seasonal adjustment, benchmarking, and simulation.
+Maintainer: Vinodhkumar Gunasekaran <vinoalles@gmail.com>
+Description: Provides deterministic forecasting for weekly, monthly,
+    quarterly, and yearly time series using the Generalized Adaptive Capped
+    Estimator. The method includes preprocessing steps for handling missing
+    and extreme values, extraction of multiple growth components (including
+    long-term, short-term, rolling, and drift-based signals), volatility-aware
+    asymmetric capping, optional seasonal adjustment through damped and
+    normalized seasonal factors, and a recursive forecast formulation with
+    moderated growth. The main interface 'gace_forecast()' returns forecasts
+    in a consistent structure, and 'plot_gace()' offers visualization support.
+    Related forecasting background is discussed in Hyndman and Athanasopoulos
+    (2021) <https://otexts.com/fpp3/> and Hyndman and Khandakar (2008)
+    <doi:10.18637/jss.v027.i03>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
-Imports: 
-    dplyr,
-    lubridate,
-    ggplot2
-Depends: 
+Imports:
+    ggplot2,
+    stats,
+    utils
+Depends:
     R (>= 4.1.0)
-Suggests: 
+Suggests:
     testthat (>= 3.0.0),
     knitr,
     rmarkdown,
-    covr
+    covr,
+    forecast
 VignetteBuilder: knitr
 Config/testthat/edition: 3
-URL: https://github.com/vinoalles/PACE
-BugReports: https://github.com/vinoalles/PACE/issues
+URL: https://github.com/vinoalles/GACE
+BugReports: https://github.com/vinoalles/GACE/issues

@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(PACE)
+library(GACE)
 
-test_check("PACE")
+test_check("GACE")

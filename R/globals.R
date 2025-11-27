@@ -1,11 +1,3 @@
-utils::globalVariables(c(
-  "Ysum",
-  "Qsum",
-  "season_mean",
-  "quart",
-  "year",
-  "Value",
-  "Time",
-  "Type",
-  "Forecast"
-))
+# R/globals.R
+
+utils::globalVariables(c("period", "value", "type"))
