@@ -18,7 +18,9 @@ Description: Provides deterministic forecasting for weekly, monthly,
     in a consistent structure, and 'plot_gace()' offers visualization support.
     Related forecasting background is discussed in Hyndman and Athanasopoulos
     (2021) <https://otexts.com/fpp3/> and Hyndman and Khandakar (2008)
-    <doi:10.18637/jss.v027.i03>.
+    <doi:10.18637/jss.v027.i03>.The method extends classical extrapolative
+    forecasting approaches and is suited for operational and business planning
+    contexts where stability and interpretability are important.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
